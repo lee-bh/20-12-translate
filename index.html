@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.rotating-box{width:200px; height:200px; position: absolute;
+				left:200px; top:200px; background: blue;
+				animation:rot 2s infinite linear;}
+		
+
+		.outer-box{ position: absolute;
+				left:200px; top:400px;
+				animation:rot 2s infinite linear; }
+		.translated{width:200px; height:200px;  background: red;
+				transform: translate(400px);}
+
+		@keyframes rot{ to{transform: rotate(360deg);} }
+	</style>
+</head>
+<body>
+		<div class="rotating-box"></div>
+
+		<!--중심이 회전하는 상자를 바깥에 두고 -->
+		<div class="outer-box">
+			<!-- translte를 사용해 중심이 축이 바깥쪽으로 간 상자를 그 속에-->
+			<!-- translate안쓰고 이 안에서 absolute로 움직여도 됨 -->
+			<div class="translated">df</div>
+		</div>
+</body>
+</html>
